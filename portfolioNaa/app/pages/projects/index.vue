@@ -1,7 +1,7 @@
 <script setup>
 import ParallaxBackground from "~/components/ParallaxBackground.vue"
 import { projects } from "../../assets/data/projects.js"
-import { useRouter } from "vue-router"
+import { useRouter } from "vue-router";
 
 const router = useRouter()
 
@@ -11,17 +11,20 @@ const goToProject = (id) => {
 </script>
 <template>
     <ParallaxBackground/>
-  <section class="min-h-screen pt-28 relative overflow-hidden mt-[100px]">
+  <section class="min-h-screen pt-28 relative overflow-hidden mb-[50px]">
     <div class="glow glow1"></div>
     <div class="glow glow2"></div>
 
     <div class="max-w-7xl mx-auto px-6">
 
-      <h1 class="text-5xl font-bold mb-16 animate-fadeUp">
-        My
-        <span class="gradient-text">Projects</span>
+      <h1 class="text-5xl font-bold mb-6 animate-fadeUp text-center text-white">
+        Featured
+        <span class="gradient-text ">Projects</span>
       </h1>
+<p class="text-center mb-10 gradient-text"> 
+      Showcasing my best work with modern technologies and clean code
 
+</p>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <div
@@ -29,7 +32,7 @@ const goToProject = (id) => {
           :key="project.id"
           @click="goToProject(project.id)"
           class="project-card cursor-pointer p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur"
-          :style="{ animationDelay: index * 0.1 + 's' }"
+          :style="{ animationDelay: index * 0.3 + 's' }"
         >
           <img
             :src="project.image"
@@ -39,8 +42,6 @@ const goToProject = (id) => {
           <h3 class="text-xl font-semibold text-white">
             {{ project.title }}
           </h3>
-
-          <!-- SHORT ONLY -->
           <p class="text-gray-400 mt-2 text-sm">
             {{ project.short }}
           </p>
@@ -57,6 +58,7 @@ const goToProject = (id) => {
 
 .gradient-text{
   background: linear-gradient(90deg,#6366f1,#a855f7,#3b82f6);
+  -webkit-background-clip:text;
   color:transparent;
 }
 

@@ -43,7 +43,7 @@ const project = projects.find(p => p.id === id)
         <a
           :href="project.github_link"
           target="_blank"
-          class="btn-outline"
+          class="btn-outline text-white"
         >
           GitHub
         </a>
@@ -58,6 +58,7 @@ const project = projects.find(p => p.id === id)
 
 .gradient-text{
   background: linear-gradient(90deg,#6366f1,#a855f7,#3b82f6);
+  -webkit-background-clip:text;
   color:transparent;
 }
 
