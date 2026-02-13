@@ -14,12 +14,26 @@ const toggleMenu = () => {
           MOGES
         </span>
       </h1>
-      <ul class="hidden md:flex gap-10 text-gray-300 font-medium">
-        <li class="navLink">Home</li>
-        <li class="navLink">About</li>
-        <li class="navLink">Projects</li>
-        <li class="navLink">Contact</li>
-      </ul>
+    <ul class="hidden md:flex gap-10 text-gray-300 font-medium">
+
+  <li>
+    <NuxtLink to="/" class="navLink">Home</NuxtLink>
+  </li>
+
+  <li>
+    <NuxtLink to="/about" class="navLink">About</NuxtLink>
+  </li>
+
+  <li>
+    <NuxtLink to="/projects" class="navLink">Projects</NuxtLink>
+  </li>
+
+  <li>
+    <NuxtLink to="/contact" class="navLink">Contact</NuxtLink>
+  </li>
+
+</ul>
+
       <div class="flex items-center gap-4">
         <ThemeToggle />
         <button 
@@ -43,10 +57,18 @@ const toggleMenu = () => {
       <div v-if="isOpen" 
            class="md:hidden bg-gray backdrop-blur-xl border-t border-white/10">
         <ul class="flex flex-col items-center py-6 gap-6 text-gray-300 font-medium">
-          <li class="mobileLink" @click="toggleMenu">Home</li>
-          <li class="mobileLink" @click="toggleMenu">About</li>
-          <li class="mobileLink" @click="toggleMenu">Projects</li>
-          <li class="mobileLink" @click="toggleMenu">Contact</li>
+          <li >
+            <NuxtLink to="/" class="mobileLink" @click="toggleMenu">Home</NuxtLink>
+          </li>
+          <li >
+            <NuxtLink to="/about" class="mobileLink" @click="toggleMenu">About</NuxtLink>
+          </li>
+          <li >
+            <NuxtLink to="projects" class="mobileLink" @click="toggleMenu">Projects</NuxtLink>
+          </li>
+          <li>
+            <NuxtLink to="/contact" class="mobileLink" @click="toggleMenu">Contact</NuxtLink>
+          </li>
         </ul>
       </div>
     </transition>

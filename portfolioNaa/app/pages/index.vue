@@ -1,5 +1,5 @@
 <script setup>
-import Navbar from '~/components/Navbar.vue'
+import AboutSection from '~/components/about/AboutSection.vue';
 import HeroSection from '~/components/HeroSection.vue'
 import ParallaxBackground from '~/components/ParallaxBackground.vue'
 </script>
@@ -7,7 +7,7 @@ import ParallaxBackground from '~/components/ParallaxBackground.vue'
 <template>
   <div class="text-white min-h-screen">
     <ParallaxBackground />
-    <Navbar />
     <HeroSection />
+    <AboutSection/>
   </div>
 </template>
