@@ -2,6 +2,7 @@
 import AboutSection from '~/components/about/AboutSection.vue';
 import HeroSection from '~/components/HeroSection.vue'
 import ParallaxBackground from '~/components/ParallaxBackground.vue'
+import Projects from '../pages/projects/index.vue';
 </script>
 
 <template>
@@ -9,5 +10,6 @@ import ParallaxBackground from '~/components/ParallaxBackground.vue'
     <ParallaxBackground />
     <HeroSection />
     <AboutSection/>
+    <Projects/>
   </div>
 </template>
