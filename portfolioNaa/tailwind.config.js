@@ -8,7 +8,23 @@ export default {
     "./app/**/*.vue",
   ],
   theme: {
-    extend: {},
+   extend: {
+  animation: {
+    float1: "float1 12s ease-in-out infinite",
+    float2: "float2 15s ease-in-out infinite",
+  },
+  keyframes: {
+    float1: {
+      "0%,100%": { transform: "translate(0,0)" },
+      "50%": { transform: "translate(60px, -60px)" },
+    },
+    float2: {
+      "0%,100%": { transform: "translate(0,0)" },
+      "50%": { transform: "translate(-50px, 50px)" },
+    },
+  },
+}
+,
   },
   plugins: [],
 }

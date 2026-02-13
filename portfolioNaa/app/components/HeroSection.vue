@@ -1,48 +1,65 @@
-<template>
-  <section class="relative min-h-screen flex items-center overflow-hidden">
+<script setup>
+import { ref, onMounted } from 'vue'
+const text = "MERN Stack Developer"
+const display = ref("")
+let i = 0
+let interval;
+onMounted(() => {
+   interval = setInterval(() => {
+    display.value += text[i]
+    i++
+    if (i >= text.length) clearInterval(interval)
+  }, 80)
+})
+</script>
 
-    <!-- Animated Background -->
-    <div class="absolute inset-0 -z-10">
-      <div class="absolute w-[500px] h-[500px] bg-purple-600/30 blur-[120px] rounded-full animate-float1"></div>
-      <div class="absolute right-0 bottom-0 w-[400px] h-[400px] bg-indigo-600/30 blur-[120px] rounded-full animate-float2"></div>
-    </div>
+<template>
+  <section class="min-h-screen flex items-center pt-24">
 
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
-      <!-- Left Content -->
       <div>
-        <p class="text-gray-400 mb-4 text-lg">Hello!</p>
 
-        <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight">
-          This is
-          <span class="bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">
-            Moges Sisay
+        <p class="text-gray-400 mb-4 text-lg animate-fadeIn">
+          Hello I am
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+
+          <span class="text-white">Moges</span>
+
+          <br>
+
+          <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+            Sisay
           </span>
+
         </h1>
 
-        <p class="text-gray-400 mt-6 text-xl">
-          Creative Developer
+        <!-- Typing -->
+        <p class="text-indigo-300 mt-6 text-xl h-8">
+          {{ display }}
         </p>
 
         <!-- Buttons -->
         <div class="flex gap-6 mt-10">
 
-          <button class="px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:scale-105 transition">
-            Hire me
+          <button class="px-8 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:scale-105 transition">
+            Hire Me
           </button>
 
-          <button class="px-8 py-3 rounded-full border border-purple-500 hover:bg-purple-500/20 transition">
-            My works
+          <button class="px-8 py-3 rounded-full border border-indigo-500 hover:bg-indigo-500/20 transition">
+            View Work
           </button>
 
         </div>
+
       </div>
 
-      <!-- Right Image -->
       <div class="flex justify-center">
         <img
           src="/images/profile.png"
-          class="w-[380px] drop-shadow-2xl"
+          class="w-[330px] h-[630px] drop-shadow-[0_20px_80px_rgba(99,102,241,0.4)] hover:scale-105 transition duration-500"
         />
       </div>
 
@@ -50,3 +67,14 @@
 
   </section>
 </template>
+
+<style scoped>
+.animate-fadeIn {
+  animation: fade 1.2s ease forwards;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
