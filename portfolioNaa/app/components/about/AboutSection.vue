@@ -66,7 +66,7 @@ const skills = [
         <div class="relative animate-fadeRight">
           <div class="floating-card p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur">
             <p class="text-gray-300 text-lg">
-              Addis Ababa, Ethiopia 🇪🇹  
+              Addis Ababa, Ethiopia 🇪🇹
               Building real solutions with modern web technologies.
             </p>
           </div>
@@ -84,7 +84,7 @@ const skills = [
             v-for="(skill,index) in skills"
             :key="skill.name"
             class="skill-card p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur"
-            :style="{ animationDelay: index * 0.1 + 's' }"
+            :style="{ animationDelay: index * 0.3 + 's' }"
           >
             <component :is="skill.icon" class="w-8 h-8 text-indigo-400 mb-3"/>
             <p class="text-gray-200 text-sm font-medium">{{ skill.name }}</p>
@@ -133,7 +133,7 @@ const skills = [
 /* ---------------- Floating Card ---------------- */
 
 .floating-card {
-  animation: floatCard 6s ease-in-out infinite;
+  animation: floatCard 3s ease-in-out infinite;
 }
 
 @keyframes floatCard {
