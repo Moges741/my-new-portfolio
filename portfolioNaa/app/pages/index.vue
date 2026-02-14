@@ -5,6 +5,7 @@ import ParallaxBackground from '~/components/ParallaxBackground.vue'
 import Projects from '../pages/projects/index.vue';
 
 import { ref, onMounted } from "vue"
+import Contact from './contact.vue';
 const show = ref(false)
 onMounted(() => {
   setTimeout(() => {
@@ -90,7 +91,7 @@ const tools = [
   </div>
 
 </section>
-
+<Contact/>
 </template>
 <style scoped>
 
