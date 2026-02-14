@@ -16,7 +16,7 @@ onMounted(() => {
 <template>
   <section class="min-h-screen flex items-center pt-24">
 
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-5 items-center">
 
       <div>
 
@@ -36,12 +36,12 @@ onMounted(() => {
 
         </h1>
 
-        <!-- Typing -->
+
         <p class="text-indigo-300 mt-6 text-xl h-8">
           {{ display }}
         </p>
 
-        <!-- Buttons -->
+
         <div class="flex gap-6 mt-10">
 
           <button class="px-8 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:scale-105 transition">
@@ -58,8 +58,8 @@ onMounted(() => {
 
       <div class="flex justify-center">
         <img
-          src="/images/profile.png"
-          class="w-[330px] h-[630px] drop-shadow-[0_20px_80px_rgba(99,102,241,0.4)] hover:scale-105 transition duration-500"
+          src="/images/mogese.png"
+          class="drop-shadow-[0_20px_80px_rgba(99,102,241,0.4)] hover:scale-105 transition duration-500"
         />
       </div>
 

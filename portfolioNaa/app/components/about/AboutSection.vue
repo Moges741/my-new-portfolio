@@ -1,7 +1,6 @@
-
 <script setup>
 import { ref, onMounted } from "vue"
-import { Code, Database, Globe, GitBranch, Server, Cpu} from "lucide-vue-next"
+import { Code, Database, Globe, GitBranch, Server, Cpu } from "lucide-vue-next"
 
 const aboutText = "Full Stack Developer • Problem Solver • Tech Trainer"
 const aboutDisplay = ref("")
@@ -22,6 +21,35 @@ const skills = [
   { name: "Node / Express", icon: Server },
   { name: "MySQL", icon: Database },
   { name: "Git and Github", icon: GitBranch },
+]
+
+const experiences = [
+  {
+    date: "Present",
+    title: "MERN Stack Developer and Graduated Evangadi",
+    company: "Evangadi Tech",
+    description: "Graduated as a Full Stack Developer from Evangadi Tech, mastering modern web development technologies and best practices. Building full-stack applications using MongoDB, Express, React, and Node.js.",
+    tags: ["MERN Stack", "JavaScript", "React", "Node.js", "MYSQL"],
+    imagePlaceholder: true,
+    imageAlt: "Evangadi Tech Certificate",
+    imageSrc: "../../assets/images/certificate.jpg" ,
+  },
+  {
+    date: "Jan 2024 - Present",
+    title: "Software Engineering Trainer",
+    company: "Jimma Institute of Technology (JIT)",
+    description: "Training students in software engineering principles, algorithms, and system design. Mentoring teams on projects.",
+    tags: ["Training", "Mentoring", "Software Engineering"],
+    imagePlaceholder: false
+  },
+  {
+    date: "Jun 2025 - Present",
+    title: "SPEC Software Development Member",
+    company: "SPEC JIT",
+    description: "Active member of the SPEC Club at Jimma Institute of Technology (JIT), collaborating on engineering projects, product development with students, and competing in hackathons.",
+    tags: ["Software Development", "Teamwork", "Hackathons"],
+    imagePlaceholder: false
+  }
 ]
 </script>
 
@@ -73,9 +101,72 @@ const skills = [
         </div>
 
       </div>
+
+ <div class="mt-20">
+  <h2 class="text-3xl font-semibold mb-10 text-center md:text-left">
+    Education & Experience
+  </h2>
+
+  <div class="relative">
+    <div class="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-0.5 h-full bg-white/20"></div>
+    <div class="md:hidden absolute left-4 top-0 w-0.5 h-full bg-white/20"></div>
+
+    <div
+      v-for="(exp, index) in experiences"
+      :key="exp.title"
+      class="relative mb-10 md:mb-16"
+    >
+      <div
+        class="absolute w-4 h-4 rounded-full bg-indigo-400 
+               md:left-1/2 md:-translate-x-1/2
+               left-4"
+      ></div>
+
+      <div
+        class="ml-12 md:ml-0 md:w-5/12 
+               md:px-6
+               p-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur 
+               transition-all duration-300 hover:border-indigo-400/60 hover:shadow-lg"
+        :class="index % 2 === 0 
+          ? 'md:mr-auto md:text-right' 
+          : 'md:ml-auto'"
+      >
+
+        <span class="text-xs text-indigo-300 bg-indigo-900/40 px-3 py-1 rounded-full">
+          {{ exp.date }}
+        </span>
+
+        <h3 class="text-lg md:text-xl font-semibold text-gray-200 mt-3">
+          {{ exp.title }}
+        </h3>
+
+        <p class="text-gray-400 text-sm mb-2">
+          {{ exp.company }}
+        </p>
+
+        <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-4">
+          {{ exp.description }}
+        </p>
+
+        <div class="flex flex-wrap gap-2 justify-start md:justify-end">
+          <span
+            v-for="tag in exp.tags"
+            :key="tag"
+            class="px-3 py-1 text-xs bg-white/5 rounded-full border border-white/10"
+          >
+            {{ tag }}
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
       <div class="mt-24">
 
-        <h2 class="text-3xl font-semibold mb-10 animate-fadeUp">
+        <h2 class="text-3xl font-semibold mb-10 animate-fadeUp text-center">
           Technical Skills
         </h2>
 
@@ -99,9 +190,6 @@ const skills = [
 </template>
 
 <style scoped>
-
-/* ---------------- Glow Background ---------------- */
-
 .glow {
   position: absolute;
   width: 500px;
@@ -129,9 +217,6 @@ const skills = [
   0%,100% { transform: translateY(0px) }
   50% { transform: translateY(-40px) }
 }
-
-/* ---------------- Floating Card ---------------- */
-
 .floating-card {
   animation: floatCard 3s ease-in-out infinite;
 }
@@ -141,7 +226,26 @@ const skills = [
   50% { transform: translateY(-15px) }
 }
 
-/* ---------------- Skill Cards ---------------- */
+.experience-card {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.15);
+}
+
+.certificate-box {
+  transition: all 0.3s ease;
+}
+
+.certificate-box:hover {
+  transform: scale(1.02);
+  border-color: rgba(99, 102, 241, 0.6);
+}
 
 .skill-card {
   animation: fadeUp 0.8s ease forwards;
@@ -152,8 +256,6 @@ const skills = [
   transform: translateY(-6px) scale(1.03);
   border-color: rgba(99,102,241,0.6);
 }
-
-/* ---------------- Entrance Animations ---------------- */
 
 .animate-fadeUp {
   animation: fadeUp 1s ease forwards;
