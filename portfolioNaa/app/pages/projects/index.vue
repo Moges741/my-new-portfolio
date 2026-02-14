@@ -1,6 +1,6 @@
 <script setup>
 import ParallaxBackground from "~/components/ParallaxBackground.vue"
-import { projects } from "../../assets/data/projects.js"
+import { projects } from "../../composables/useProjects.js"
 import { useRouter } from "vue-router";
 
 const router = useRouter()
