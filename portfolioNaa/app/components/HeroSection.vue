@@ -45,11 +45,11 @@ onMounted(() => {
         <div class="flex gap-6 mt-10">
 
           <button class="px-8 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:scale-105 transition">
-            Hire Me
+            <NuxtLink to="/contact">Hire Me</NuxtLink>
           </button>
 
           <button class="px-8 py-3 rounded-full border border-indigo-500 hover:bg-indigo-500/20 transition">
-            View Work
+            <NuxtLink to="/projects">View Projects</NuxtLink>
           </button>
 
         </div>
