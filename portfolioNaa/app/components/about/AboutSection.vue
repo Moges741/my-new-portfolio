@@ -103,7 +103,7 @@ const experiences = [
       </div>
 
  <div class="mt-20">
-  <h2 class="text-3xl font-semibold mb-10 text-center md:text-left">
+  <h2 class="text-3xl font-semibold mb-10 text-center">
     Education & Experience
   </h2>
 

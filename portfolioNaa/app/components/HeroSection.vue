@@ -18,7 +18,7 @@ onMounted(() => {
 
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-5 items-center">
 
-      <div>
+      <div class="pl-[40px]">
 
         <p class="text-gray-400 mb-4 text-lg animate-fadeIn">
           Hello I am
@@ -58,7 +58,7 @@ onMounted(() => {
 
       <div class="flex justify-center">
         <img
-          src="/images/mogese.png"
+          src="/images/mo5.png"
           class="drop-shadow-[0_20px_80px_rgba(99,102,241,0.4)] hover:scale-105 transition duration-500"
         />
       </div>
