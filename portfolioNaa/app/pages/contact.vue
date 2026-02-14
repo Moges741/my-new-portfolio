@@ -1,5 +1,6 @@
 <script setup>
-import { MapPin, Mail, Phone, Send } from "lucide-vue-next"
+
+import { MapPin, Mail, Phone, Send , Briefcase} from "lucide-vue-next"
 import { ref, onMounted } from "vue"
 import ParallaxBackground from "~/components/ParallaxBackground.vue"
 
@@ -59,10 +60,29 @@ const contacts = [
           <span class="gradient-text"> Touch</span>
         </h1>
 
-        <p class="text-gray-400 mt-6 max-w-2xl mx-auto leading-relaxed text-sm md:text-base">
-          Feel free to get in touch with me. I am always open to discussing
-          new projects, creative ideas, or opportunities to be part of your vision.
-        </p>
+
+          <div class="mt-8 text-center">
+    <div class="inline-flex items-center gap-3 px-6 py-3
+                rounded-full border border-emerald-400/30
+                bg-emerald-500/10 backdrop-blur-md
+                shadow-lg shadow-emerald-500/10
+                animate-fadeIn">
+
+      <span class="relative flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full 
+                     rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full 
+                     h-3 w-3 bg-emerald-500"></span>
+      </span>
+
+      <Briefcase class="w-4 h-4 text-emerald-400" />
+
+      <span class="text-emerald-300 font-medium tracking-wide text-sm md:text-base">
+        Open to Work || MERN Stack Developer
+      </span>
+    </div>
+
+  </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
@@ -116,8 +136,6 @@ const contacts = [
 
 <style scoped>
 
-/* Glow Background */
-
 .glow{
   position:absolute;
   width:500px;
@@ -146,13 +164,20 @@ const contacts = [
   50%{ transform:translateY(-30px); }
 }
 
-/* Gradient Text */
 
 .gradient-text{
   background: linear-gradient(90deg,#6366f1,#a855f7,#3b82f6);
   -webkit-background-clip:text;
   background-clip:text;
   color:transparent;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn .6s ease forwards;
 }
 
 </style>
