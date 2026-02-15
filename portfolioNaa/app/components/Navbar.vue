@@ -38,7 +38,7 @@ const toggleMenu = () => {
           target="_blank"
           class="social-icon"
         >
-          <Github class="w-5 h-5 text-white" />
+          <Github class="w-5 h-5 text-white hover:text-indigo-400 transition-colors" />
         </a>
       <div class="flex items-center gap-4">
         <button 
