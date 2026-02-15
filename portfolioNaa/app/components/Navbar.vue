@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import ThemeToggle from './ThemeToggle.vue';
+import { Github } from "lucide-vue-next"
 const isOpen = ref(false)
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
@@ -9,9 +9,9 @@ const toggleMenu = () => {
 <template>
   <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-black/40 border-b border-white/5">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold tracking-wide">
-        <span class="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-          MOGES
+      <h1 class="text-2xl font-bold tracking-wide font-heading text-5xl">
+        <span class="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent name">
+          <NuxtLink to="/"> MOGES</NuxtLink>
         </span>
       </h1>
     <ul class="hidden md:flex gap-10 text-gray-300 font-medium">
@@ -33,9 +33,14 @@ const toggleMenu = () => {
   </li>
 
 </ul>
-
+    <a
+          href="https://github.com/Moges741"
+          target="_blank"
+          class="social-icon"
+        >
+          <Github class="w-5 h-5 text-white" />
+        </a>
       <div class="flex items-center gap-4">
-        <ThemeToggle />
         <button 
           @click="toggleMenu"
           class="md:hidden flex flex-col gap-1.5 focus:outline-none"
@@ -77,6 +82,11 @@ const toggleMenu = () => {
 </template>
 
 <style scoped>
+.name{
+  font-family: "Playwrite AT", cursive;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
 .navLink {
   position: relative;
   cursor: pointer;
@@ -102,10 +112,9 @@ const toggleMenu = () => {
   width: 100%;
 }
 
-/* Mobile Hamburger */
 .bar {
-  width: 28px;
-  height: 3px;
+  width: 22px;
+  height: 2.5px;
   background: rgb(17, 172, 203);
   transition: all .8s ease;
 }
@@ -118,7 +127,7 @@ const toggleMenu = () => {
   transform: rotate(-45deg) translateY(-12px);
 }
 
-/* Mobile Links */
+
 .mobileLink {
   cursor: pointer;
 }

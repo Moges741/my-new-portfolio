@@ -103,7 +103,7 @@ const experiences = [
       </div>
 
  <div class="mt-20">
-  <h2 class="text-3xl font-semibold mb-10 text-center">
+  <h2 class="font-heading text-5xl text-3xl font-semibold mb-10 text-center">
     Education & Experience
   </h2>
 
@@ -144,7 +144,7 @@ const experiences = [
           {{ exp.company }}
         </p>
 
-        <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-4">
+        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed mb-4">
           {{ exp.description }}
         </p>
 

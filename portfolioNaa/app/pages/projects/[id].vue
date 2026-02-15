@@ -23,10 +23,10 @@ const project = projects.find(p => p.id === id)
         class="rounded-3xl mb-10 w-full shadow-2xl animate-fadeUp"
       />
 
-      <h1 class="text-4xl font-bold mb-6 gradient-text animate-fadeUp">
+      <h1 class="font-heading text-5xl text-4xl font-bold mb-6 gradient-text animate-fadeUp">
         {{ project.title }}
       </h1>
-      <p class="text-gray-300 text-lg leading-relaxed mb-10 animate-fadeUp">
+      <p class="font-body text-gray-300 text-lg leading-relaxed mb-10 animate-fadeUp">
         {{ project.description }}
       </p>
 

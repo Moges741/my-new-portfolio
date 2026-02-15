@@ -55,7 +55,7 @@ const contacts = [
         class="text-center mb-16 transition-all duration-1000"
         :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'"
       >
-        <h1 class="text-4xl md:text-6xl font-bold text-white">
+        <h1 class="font-heading text-5xl text-4xl md:text-6xl font-bold text-white">
           Get In
           <span class="gradient-text"> Touch</span>
         </h1>

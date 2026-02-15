@@ -25,6 +25,11 @@ export default {
   },
 }
 ,
+fontFamily: {
+        heading: ['Space Grotesk', 'sans-serif'],
+        body: ['Outfit', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
   },
   plugins: [],
 }
