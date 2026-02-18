@@ -2,6 +2,7 @@ import netflix from "@/assets/images/Netflix.png"
 import amazon from "@/assets/images/amazon.png"
 import forum from "@/assets/images/forum.png"
 import realEstate from "@/assets/images/realestate.png"
+import Quotes from "@/assets/images/Quotes.png"
 
 export const projects = [
   {
@@ -47,5 +48,16 @@ export const projects = [
     image: realEstate,
     github_link: "https://github.com/Moges741/realestate1",
     live_link: "https://emrealestate.vercel.app/"
+  },
+  {
+    id: 5,
+    title: "Quotes App",
+    short: "Spiritual quotes collection.",
+    description:
+      "Quotes app with a collection of spiritual quotes, categorized by themes, and a user-friendly interface.",
+    category: "frontend",
+    image: Quotes,
+    github_link: "https://github.com/Moges741/Jechoota-Abbootti",
+    live_link: "https://jechoota-abbootti.vercel.app/"
   }
 ]

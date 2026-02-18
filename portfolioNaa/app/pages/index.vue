@@ -11,6 +11,7 @@ onMounted(() => {
   setTimeout(() => {
     show.value = true
   }, 300)
+
 })
 const tools = [
   "HTML",
@@ -67,8 +68,8 @@ const tools = [
     <div class="marquee-wrapper mt-8">
   <div class="marquee-track">
     <div
-      v-for="(tool,index) in [...tools, ...tools]"
-      :key="index"
+      v-for="(tool) in [...tools, ...tools]"
+      
       class="tool-slide"
     >
       {{ tool }}

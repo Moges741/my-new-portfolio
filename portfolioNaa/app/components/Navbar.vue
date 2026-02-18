@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { Github } from "lucide-vue-next"
+import { Github } from "lucide-vue-next";
 const isOpen = ref(false)
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
