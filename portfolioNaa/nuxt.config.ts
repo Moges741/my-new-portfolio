@@ -13,5 +13,12 @@ compatibilityDate: '2025-07-15',
       autoprefixer: {},
     },
   },
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/icon.png' }
+      ]
+    }
+  },
    devtools: { enabled: true }
 })
