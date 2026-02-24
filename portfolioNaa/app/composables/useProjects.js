@@ -1,8 +1,8 @@
 import netflix from "@/assets/images/Netflix.png"
 import amazon from "@/assets/images/amazon.png"
 import forum from "@/assets/images/forum.png"
-import realEstate from "@/assets/images/realestate.png"
-import Quotes from "@/assets/images/Quotes.png"
+import Quotes from "@/assets/images/Quotes.png";
+import QueueLess from "@/assets/images/queueLes.png";
 
 export const projects = [
   {
@@ -40,14 +40,14 @@ export const projects = [
   },
   {
     id: 4,
-    title: "RealEstate Platform",
-    short: "Property listing system.",
+    title: "QueueLess Ethiopia",
+    short: "Queue management system , order your ticket online.",
     description:
-      "Real estate platform with filtering, property search, listing management, and modern UI experience.",
+      "QueueLess Ethiopia is a queue management system that allows users to order tickets online and manage their queue positions. It provides a convenient way for users to avoid long waits and efficiently manage their time.",
     category: "fullstack",
-    image: realEstate,
-    github_link: "https://github.com/Moges741/realestate1",
-    live_link: "https://emrealestate.vercel.app/"
+    image: QueueLess,
+    github_link: "https://github.com/Moges741/-Dehna-Ketero----QueueLess",
+    live_link: "https://queueless-ethio.vercel.app/"
   },
   {
     id: 5,
